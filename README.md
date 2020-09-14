@@ -44,4 +44,4 @@ Auth:
 ## Images
 
 #### Wireframe:
-[Wireframes built with Miro](https://miro.com/app/board/o9J_klBOA7o=/)
+[Wireframes - built with Miro](https://miro.com/app/board/o9J_klBOA7o=/)
