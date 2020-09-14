@@ -30,11 +30,10 @@ Auth:
 
 ### Technologies Used
 
-- jQuery
-- HTML/CSS
+- React
+- HTML / CSS
+- JavaScript
 - Bootstrap
-- Javascript
-
 
 ### Unsolved Problems
 
