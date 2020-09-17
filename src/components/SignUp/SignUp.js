@@ -12,6 +12,7 @@ class SignUp extends Component {
     super()
 
     this.state = {
+      name: '',
       email: '',
       password: '',
       passwordConfirmation: ''
@@ -37,7 +38,7 @@ class SignUp extends Component {
       }))
       .then(() => history.push('/'))
       .catch(error => {
-        this.setState({ email: '', password: '', passwordConfirmation: '' })
+        this.setState({ name: '', email: '', password: '', passwordConfirmation: '' })
         msgAlert({
           heading: 'Sign Up Failed with error: ' + error.message,
           message: messages.signUpFailure,
@@ -47,13 +48,24 @@ class SignUp extends Component {
   }
 
   render () {
-    const { email, password, passwordConfirmation } = this.state
+    const { name, email, password, passwordConfirmation } = this.state
 
     return (
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
           <h3>Sign Up</h3>
           <Form onSubmit={this.onSignUp}>
+            <Form.Group controlId="name">
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="name"
+                value={name}
+                placeholder="Enter username"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
             <Form.Group controlId="email">
               <Form.Label>Email address</Form.Label>
               <Form.Control
@@ -70,8 +82,8 @@ class SignUp extends Component {
               <Form.Control
                 required
                 name="password"
-                value={password}
                 type="password"
+                value={password}
                 placeholder="Password"
                 onChange={this.handleChange}
               />
@@ -81,8 +93,8 @@ class SignUp extends Component {
               <Form.Control
                 required
                 name="passwordConfirmation"
-                value={passwordConfirmation}
                 type="password"
+                value={passwordConfirmation}
                 placeholder="Confirm Password"
                 onChange={this.handleChange}
               />
@@ -90,8 +102,7 @@ class SignUp extends Component {
             <Button
               variant="primary"
               type="submit"
-            >
-              Submit
+            >Submit
             </Button>
           </Form>
         </div>

@@ -8,6 +8,8 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import CardCreate from '../Create/CardCreate'
+import CommentCreate from '../Create/CommentCreate'
 
 class App extends Component {
   constructor () {
@@ -53,6 +55,12 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/cards-create' render={() => (
+            <CardCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='cards/:id/comment-create' render={() => (
+            <CommentCreate msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

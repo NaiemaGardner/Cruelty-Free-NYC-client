@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://aqueous-atoll-85096.herokuapp.com',
-  development: 'https://damp-shore-14818.herokuapp.com/'
+  production: 'https://damp-shore-14818.herokuapp.com',
+  development: 'http://localhost:4741'
 }
 
 if (window.location.hostname === 'localhost') {
