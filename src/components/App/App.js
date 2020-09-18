@@ -1,3 +1,5 @@
+// app.js - set up UI routes
+
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
 
@@ -9,6 +11,7 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import CardCreate from '../Create/CardCreate'
+import CardShow from '../Show/CardShow'
 import CommentCreate from '../Create/CommentCreate'
 
 class App extends Component {
@@ -61,6 +64,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='cards/:id/comment-create' render={() => (
             <CommentCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <Route path='/cards/:category/:id' render={() => (
+            <CardShow msgAlert={this.msgAlert} />
           )} />
         </main>
       </Fragment>

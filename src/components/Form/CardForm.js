@@ -1,3 +1,5 @@
+// cardform.js - card input template
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
@@ -10,10 +12,10 @@ const CardForm = ({ card, handleSubmit, handleChange, cancelPath }) => (
         <Form.Label>Brand Category</Form.Label>
         <Form.Control as="select" value={card.category} name='category' onChange={handleChange}>
           <option>Choose A Category</option>
-          <option>Edibles</option>
-          <option>Cosmetics</option>
-          <option>Wearables</option>
-          <option>Services</option>
+          <option>edibles</option>
+          <option>cosmetics</option>
+          <option>wearables</option>
+          <option>service providers</option>
         </Form.Control>
       </Form.Group>
       <Form.Group>
