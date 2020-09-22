@@ -10,8 +10,17 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Home from '../HomePage/Home'
+import EdiblesShow from '../Show/EdiblesShow'
+import CosmeticsShow from '../Show/CosmeticsShow'
+import WearablesShow from '../Show/WearablesShow'
+import ServicesShow from '../Show/ServicesShow'
+import EdibleShow from '../Show/EdibleShow'
+import CosmeticShow from '../Show/CosmeticShow'
+import WearableShow from '../Show/WearableShow'
+import ServiceShow from '../Show/ServiceShow'
+// import CardShow from '../Show/CardShow'
 import CardCreate from '../Create/CardCreate'
-import CardShow from '../Show/CardShow'
 import CommentCreate from '../Create/CommentCreate'
 
 class App extends Component {
@@ -53,21 +62,52 @@ class App extends Component {
           <Route path='/sign-in' render={() => (
             <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
+          <Route path='/cards' render={() => (
+            <Home msgAlert={this.msgAlert} />
+          )} />
+
+          <Route exact path='/cards/edibles' render={() => (
+            <EdiblesShow msgAlert={this.msgAlert} />
+          )} />
+          <Route exact path='/cards/cosmetics' render={() => (
+            <CosmeticsShow msgAlert={this.msgAlert} />
+          )} />
+          <Route exact path='/cards/wearables' render={() => (
+            <WearablesShow msgAlert={this.msgAlert} />
+          )} />
+          <Route exact path='/cards/services' render={() => (
+            <ServicesShow msgAlert={this.msgAlert} />
+          )} />
+
+          <Route exact path='/cards/edibles/:id' render={({ match }) => (
+            <EdibleShow msgAlert={this.msgAlert} match={match} />
+          )} />
+          <Route exact path='/cards/cosmetics/:id' render={({ match }) => (
+            <CosmeticShow msgAlert={this.msgAlert} match={match} />
+          )} />
+          <Route exact path='/cards/wearables/:id' render={({ match }) => (
+            <WearableShow msgAlert={this.msgAlert} match={match} />
+          )} />
+          <Route exact path='/cards/services/:id' render={({ match }) => (
+            <ServiceShow msgAlert={this.msgAlert} match={match}/>
+          )} />
+
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
+
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
+
           <AuthenticatedRoute user={user} path='/cards-create' render={() => (
             <CardCreate msgAlert={this.msgAlert} user={user} />
           )} />
+
           <AuthenticatedRoute user={user} path='cards/:id/comment-create' render={() => (
             <CommentCreate msgAlert={this.msgAlert} user={user} />
           )} />
-          <Route path='/cards/:category/:id' render={() => (
-            <CardShow msgAlert={this.msgAlert} />
-          )} />
+
         </main>
       </Fragment>
     )

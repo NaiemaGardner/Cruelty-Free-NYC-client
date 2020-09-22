@@ -1,56 +1,55 @@
-// catergoryshow.js - shows all cards within category
+// EdiblesShow.js - show edibles category
 
 import React, { Component } from 'react'
 import apiUrl from '../../apiConfig'
 import messages from '../AutoDismissAlert/messages'
 import axios from 'axios'
+// import CardDisplay from '../Card/CardDisplay'
 
-class Cards extends Component {
+class EdiblesShow extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      cards: []
+      ediblescards: []
     }
   }
 
   componentDidMount () {
     const { msgAlert } = this.props
     axios({
-      url: (`${apiUrl}/cards/${this.props.match}`)
+      url: (`${apiUrl}/cards/edibles`),
+      method: 'GET',
+      data: { card: this.state.card }
     })
       .then((res) => {
-        this.setState({ cards: res.data.cards })
+        this.setState({ ediblescards: res.data.ediblescards })
         if (res) {
           msgAlert({
             heading: 'Success!',
-            message: messages.indexCardsSuccess,
+            message: messages.indexEdiblesSuccess,
             variant: 'success'
           })
         }
       })
       .catch(() => {
         msgAlert({
-          heading: 'Failed!',
-          message: messages.indexCardsFailure,
+          heading: 'Failed',
+          message: messages.indexEdiblesFailure,
           variant: 'danger'
         })
       })
   }
 
   render () {
-    const cards = this.state
-
+    const ediblescards = this.state.ediblescards
     return (
-      <div className="items">
-        <h7>Items</h7><br/>
-        <p> </p>
-        <p> </p>
+      <div>
         <ul>
-          {cards}
+          {ediblescards}
         </ul>
       </div>
     )
   }
 }
 
-export default Cards
+export default EdiblesShow

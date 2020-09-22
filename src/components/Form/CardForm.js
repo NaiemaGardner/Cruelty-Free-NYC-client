@@ -15,7 +15,7 @@ const CardForm = ({ card, handleSubmit, handleChange, cancelPath }) => (
           <option>edibles</option>
           <option>cosmetics</option>
           <option>wearables</option>
-          <option>service providers</option>
+          <option>services</option>
         </Form.Control>
       </Form.Group>
       <Form.Group>
