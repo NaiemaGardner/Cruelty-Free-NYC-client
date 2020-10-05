@@ -27,8 +27,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "make-standard": "eslint --fix ./src;exit 0",
     "nag": "eslint ./src;exit 0",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "sh scripts/deploy.sh"
   },
   "jest": {
     "collectCoverageFrom": [
