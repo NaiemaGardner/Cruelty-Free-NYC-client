@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import CardForm from './CardForm'
+import CardForm from '../Form/CardForm'
 import apiUrl from '../../apiConfig'
 import axios from 'axios'
 
