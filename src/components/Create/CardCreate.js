@@ -28,13 +28,13 @@ class CardCreate extends Component {
 
     this.setState(prevState => {
       const updatedField = { [event.target.name]: event.target.value }
-      const editedCard = Object.assign({}, prevState.card, updatedField)
 
+      const editedCard = Object.assign({}, prevState.card, updatedField)
       return { card: editedCard }
     })
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault()
 
     axios({
@@ -52,16 +52,18 @@ class CardCreate extends Component {
     const { handleChange, handleSubmit } = this
 
     if (createdId) {
-      return <Redirect to={`/cards/${card.category}/${createdId}`} />
+      return <Redirect to={`/cards/${createdId}`} />
     }
 
     return (
-      <CardForm
-        card={card}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        cancelPath='/'
-      />
+      <div>
+        <CardForm
+          card={card}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          cancelPath='/'
+        />
+      </div>
     )
   }
 }
