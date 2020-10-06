@@ -11,6 +11,13 @@ This application allows the user to create, review, update and delete human and 
 - [Deployed Client](https://harlemhublive.github.io/Cruelty-Free-NYC-client/)
 - [Project Requirements](https://docs.google.com/document/d/1K0wAjMes_r_JDwlgIMpGIyV4CiMXHEvT0REooq3Scow/edit?usp=sharing)
 
+## Set Up | Installation
+
+1. Fork and clone this repository.
+2. Run `npm install` for dependencies.
+3. Checkout to a new branch.
+4. Use `npm start` to run development application.
+
 
 ## Planning Story
 
@@ -38,10 +45,12 @@ Auth:
 
 ### Unsolved Problems
 
-In future iterations of Cruelty Free: NYC I would like to add themed styling to the application as well as category routes for organization. 
+In future iterations of Cruelty Free: NYC I would like to add themed styling to the application as well as category routes for organization.
 
 
 ## Images
+
+![Application](Application.png)
 
 #### Wireframe:
 [Wireframes - built with Miro](https://miro.com/app/board/o9J_klBOA7o=/)
