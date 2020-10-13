@@ -6,9 +6,9 @@ This application allows the user to create, review, update and delete human and 
 
 ## Important Links
 
-- [API Repository](https://github.com/HarlemHubLive/Cruelty-Free-NYC-api)
+- [API Repository](https://github.com/NaiemaGardner/Cruelty-Free-NYC-api)
 - [Deployed API](https://damp-shore-14818.herokuapp.com/)
-- [Deployed Client](https://harlemhublive.github.io/Cruelty-Free-NYC-client/)
+- [Deployed Client](https://naiemagardner.github.io/Cruelty-Free-NYC-client/)
 - [Project Requirements](https://docs.google.com/document/d/1K0wAjMes_r_JDwlgIMpGIyV4CiMXHEvT0REooq3Scow/edit?usp=sharing)
 
 ## Set Up | Installation
