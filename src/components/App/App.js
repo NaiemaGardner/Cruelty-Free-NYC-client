@@ -41,6 +41,9 @@ class App extends Component {
           />
         ))}
         <main>
+          <h2 className='first-statement'>compassionate alternatives</h2>
+          <h2 className='second-statement'>ethical brands</h2>
+
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />

@@ -1,1 +1,43 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Kalam:wght@700&display=swap');
+
+$landing-text: #fff;
+$landing-text-background: #000;
+
+body {
+  background-image: url('Bkgd5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-bar {
+  font-family: 'Kalam', sans-serif;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px $landing-text-background;
+
+  .nav-title {
+    font-family: 'Gloria Hallelujah', sans-serif;
+    font-size: 45px;
+    left: 5px;
+    position: relative;
+    text-shadow: 1px 1px 1px $landing-text-background;
+  }
+}
+
+.first-statement {
+  color: $landing-text;
+  font-family: 'Gloria Hallelujah', sans-serif;
+  left: 135px;
+  position: relative;
+  text-shadow: 1px 1px 2px $landing-text-background;
+  top: 345px;
+}
+
+.second-statement {
+  color: $landing-text;
+  font-family: 'Gloria Hallelujah', sans-serif;
+  left: 1020px;
+  position: relative;
+  text-shadow: 1px 1px 2px $landing-text-background;
+  top: 380px;
+}
